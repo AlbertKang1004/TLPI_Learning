@@ -19,6 +19,8 @@ int main(int argc, char *argv[]) {
     fdw = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 
         S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH);
     
+    int flags = fcntl(fd, F_GETFL); // for debug
+    int flags2 = fcntl(fdw, F_GETFL); // for debug
     if (fd == -1 || fdw == -1) 
         errExit("open");
 
