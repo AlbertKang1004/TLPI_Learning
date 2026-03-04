@@ -1,5 +1,5 @@
 FLAGS = -Wall -g 
-LIBS = ../lib/error_functions.c ../lib/get_num.c ../lib/curr_time.c ./print_wait_status.c
+LIBS = ../lib/error_functions.c ../lib/get_num.c ../lib/curr_time.c
 .PHONY: clean all
 
 %: %.c
